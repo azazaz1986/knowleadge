@@ -11,16 +11,16 @@ import java.util.UUID;
 
 @SpringBootTest
 @RunWith(SpringRunner.class)
-public class Tag_TableServiceTest {
+public class TagTableServiceTest {
 
     @Autowired
     private Tag_TableService tag_tableService;
     @Test
     public void insert() {
-        TagTable tag_table = new TagTable();
-        tag_table.setTagID(UUID.randomUUID().toString());
-        tag_table.setTagText("ewt");
-        tag_tableService.insert(tag_table);
+        TagTable tagtable = new TagTable();
+        tagtable.setTagID(UUID.randomUUID().toString());
+        tagtable.setTagText("ewt");
+        tag_tableService.insert(tagtable);
     }
 
     @Test
