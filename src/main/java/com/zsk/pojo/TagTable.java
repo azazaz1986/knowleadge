@@ -11,7 +11,7 @@ import java.util.Date;
 @Data
 public class TagTable implements Serializable{
     @Id
-    private String  tag_ID;
-    private String  tag_Text;
-    private Date    create_Time;
+    private String  tagID;
+    private String  tagText;
+    private Date    createTime;
 }
