@@ -5,7 +5,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-/**
+/** Document 仓库
  * @author 夜尽
  * @date 2018/11/29 14:49
  */
