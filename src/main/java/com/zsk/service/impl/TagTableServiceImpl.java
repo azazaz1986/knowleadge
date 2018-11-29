@@ -2,14 +2,14 @@ package com.zsk.service.impl;
 
 import com.zsk.dao.TagTableDao;
 import com.zsk.pojo.TagTable;
-import com.zsk.service.Tag_TableService;
+import com.zsk.service.TagTableService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-public class Tag_TableServiceImpl implements Tag_TableService {
+public class TagTableServiceImpl implements TagTableService {
 
     @Autowired
     private TagTableDao tag_tableDao;
