@@ -27,7 +27,7 @@ public class DocumentDAOTest {
         document.setDocTitle("标题");
         document.setDocContent("正文");
         document.setReadSize(1);
-        document.setTagId(999);
+        document.setTagName("999");
         document.setCategoryId(999);
         document.setStatus(3);
         document.setGroupId(999);
