@@ -21,6 +21,8 @@ public class Category implements Serializable {
     private String categoryText;
     
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @JoinTable(name = "cate_gory",joinColumns = @JoinColumn(name = "category_category_id"),
+    inverseJoinColumns = @JoinColumn(name = "document_doc_id"))
     private List<Document> documents;
     
     public Category() {
