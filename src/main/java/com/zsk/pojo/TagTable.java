@@ -2,10 +2,7 @@ package com.zsk.pojo;
 
 import lombok.Data;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
 
@@ -14,7 +11,9 @@ import java.util.Date;
 public class TagTable implements Serializable{
     @Id
     @GeneratedValue
-    @OneToMany
+    @OneToMany(cascade = CascadeType.ALL,fetch = FetchType.LAZY)
+    @JoinTable(name = "document",joinColumns = @JoinColumn(name = "doc_id",referencedColumnName = "id"),
+            inverseJoinColumns = @JoinColumn(name = "tag_id" ,referencedColumnName = "id"))
     private Integer  tagId;
     private String  tagText;
     private Date    createTime;
