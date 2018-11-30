@@ -39,8 +39,9 @@ public class Document implements Serializable {
     @Column(name="tag_name",length=100)
     private String tagName;
     
-    @Column(name="category_id",length=10)
-    private Integer categoryId;
+    @ManyToOne(cascade = {CascadeType.MERGE,CascadeType.REFRESH},optional = false)
+    @JoinColumn(name = "category_id")
+    private Category category;
     
     @Column(name="readSize")
     private Integer readSize;

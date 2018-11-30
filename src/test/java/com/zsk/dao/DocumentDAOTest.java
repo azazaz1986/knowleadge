@@ -1,5 +1,6 @@
 package com.zsk.dao;
 
+import com.zsk.pojo.Category;
 import com.zsk.pojo.Document;
 import org.junit.Assert;
 import org.junit.Test;
@@ -20,15 +21,18 @@ import org.springframework.test.context.junit4.SpringRunner;
 public class DocumentDAOTest {
     @Autowired
     DocumentDAO documentDAO;
+    @Autowired
+    CategoryDao categoryDao;
     
     @Test
     public void save(){
         Document document = new Document();
-        document.setDocTitle("标题");
+        Category category = categoryDao.findOne(1);
+        document.setDocTitle("标题a");
         document.setDocContent("正文");
         document.setReadSize(1);
         document.setTagName("999");
-        document.setCategoryId(999);
+        document.setCategory(category);
         document.setStatus(3);
         document.setGroupId(999);
         documentDAO.save(document);

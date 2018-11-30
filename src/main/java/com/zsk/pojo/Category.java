@@ -20,7 +20,7 @@ public class Category implements Serializable {
     @Column(nullable = false) // 映射为字段，值不能为空
     private String categoryText;
     
-    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "category",cascade = CascadeType.ALL,fetch = FetchType.LAZY)
     private List<Document> documents;
     
     public Category() {
