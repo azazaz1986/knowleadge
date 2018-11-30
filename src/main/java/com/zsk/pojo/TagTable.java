@@ -14,4 +14,7 @@ public class TagTable implements Serializable{
     private String  tagID;
     private String  tagText;
     private Date    createTime;
+    
+    public TagTable() {
+    }
 }

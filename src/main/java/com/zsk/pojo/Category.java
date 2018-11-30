@@ -13,4 +13,7 @@ public class Category implements Serializable {
     @GeneratedValue
     private Long categoryId;
     private String categoryText;
+    
+    public Category() {
+    }
 }
