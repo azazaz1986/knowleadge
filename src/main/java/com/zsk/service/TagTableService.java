@@ -7,9 +7,9 @@ import java.util.List;
 public interface TagTableService {
     /**
      * 创建新的tag内容
-     * @param tag_table
+     * @param tagTable
      */
-    void insert(TagTable tag_table);
+    void insert(TagTable tagTable);
 
     /**
      * 查询所有的tag内容

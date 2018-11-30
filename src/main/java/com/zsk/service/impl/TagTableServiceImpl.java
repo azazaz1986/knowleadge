@@ -12,7 +12,7 @@ import java.util.List;
 public class TagTableServiceImpl implements TagTableService {
 
     @Autowired
-    private TagTableDao tag_tableDao;
+    private TagTableDao tagTableDao;
 
     /**
      * 创建新的tag内容
@@ -20,7 +20,7 @@ public class TagTableServiceImpl implements TagTableService {
      */
     @Override
     public void insert(TagTable tag_table) {
-        tag_tableDao.save(tag_table);
+        tagTableDao.save(tag_table);
     }
 
     /**
@@ -29,6 +29,6 @@ public class TagTableServiceImpl implements TagTableService {
      */
     @Override
     public List<TagTable> findAll() {
-        return tag_tableDao.findAll();
+        return tagTableDao.findAll();
     }
 }
