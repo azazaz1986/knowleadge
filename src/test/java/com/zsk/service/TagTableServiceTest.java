@@ -14,7 +14,7 @@ import java.util.UUID;
 public class TagTableServiceTest {
 
     @Autowired
-    private Tag_TableService tag_tableService;
+    private TagTableService tag_tableService;
     @Test
     public void insert() {
         TagTable tagtable = new TagTable();

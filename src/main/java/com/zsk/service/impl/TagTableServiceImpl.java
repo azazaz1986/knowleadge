@@ -2,17 +2,17 @@ package com.zsk.service.impl;
 
 import com.zsk.dao.TagTableDao;
 import com.zsk.pojo.TagTable;
-import com.zsk.service.Tag_TableService;
+import com.zsk.service.TagTableService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-public class Tag_TableServiceImpl implements Tag_TableService {
+public class TagTableServiceImpl implements TagTableService {
 
     @Autowired
-    private TagTableDao tag_tableDao;
+    private TagTableDao tagTableDao;
 
     /**
      * 创建新的tag内容
@@ -20,7 +20,7 @@ public class Tag_TableServiceImpl implements Tag_TableService {
      */
     @Override
     public void insert(TagTable tag_table) {
-        tag_tableDao.save(tag_table);
+        tagTableDao.save(tag_table);
     }
 
     /**
@@ -29,6 +29,6 @@ public class Tag_TableServiceImpl implements Tag_TableService {
      */
     @Override
     public List<TagTable> findAll() {
-        return tag_tableDao.findAll();
+        return tagTableDao.findAll();
     }
 }
