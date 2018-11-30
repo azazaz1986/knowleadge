@@ -26,7 +26,7 @@ public class Document implements Serializable {
     private String docTitle;
     
     private String docContent;
-    @OneToMany
+
     private Integer tagId;
     
     private Integer categoryId;
