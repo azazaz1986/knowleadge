@@ -11,6 +11,8 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import javax.transaction.Transactional;
+
 
 /** Document测试类
  * @author 夜尽
@@ -39,10 +41,12 @@ public class DocumentDAOTest {
     }
     
     @Test
+    @Transactional
     public void findOne(){
         Document document = new Document();
-        document = documentDAO.findOne(4);
-        System.out.println(document);
+        document = documentDAO.findOne(1);
+        Category category = document.getCategory();
+        System.out.println(category);
     }
     
     @Test

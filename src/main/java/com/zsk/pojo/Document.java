@@ -1,6 +1,8 @@
 package com.zsk.pojo;
 
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.DynamicUpdate;
 import org.hibernate.annotations.UpdateTimestamp;
@@ -16,7 +18,8 @@ import java.util.Date;
  * @date 2018/11/29 14:40
  */
 @Entity
-@Data
+@Getter
+@Setter
 @DynamicUpdate
 public class Document implements Serializable {
     private static final long serialVersionUID = -8033450866659078468L;
