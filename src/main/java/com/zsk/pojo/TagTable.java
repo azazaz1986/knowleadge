@@ -3,6 +3,7 @@ package com.zsk.pojo;
 import lombok.Data;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import java.io.Serializable;
 import java.util.Date;
@@ -11,7 +12,8 @@ import java.util.Date;
 @Data
 public class TagTable implements Serializable{
     @Id
-    private String  tagId;
+    @GeneratedValue
+    private Integer  tagId;
     private String  tagText;
     private Date    createTime;
     

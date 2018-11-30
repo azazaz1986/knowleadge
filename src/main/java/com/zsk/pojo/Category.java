@@ -11,7 +11,7 @@ import java.io.Serializable;
 public class Category implements Serializable {
     @Id
     @GeneratedValue
-    private Long categoryId;
+    private Integer categoryId;
     private String categoryText;
     
     public Category() {
