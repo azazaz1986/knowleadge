@@ -23,6 +23,20 @@ public class Category implements Serializable {
     @OneToMany(mappedBy = "category",cascade = CascadeType.ALL,fetch = FetchType.LAZY)
     private List<Document> documents;
     
+    @Column(name = "parent_id")
+    @Size(min = 2,max = 11)
+    private Integer parentId;
+    
+    @Column(name = "doc_type")
+    @Size(min = 2,max = 5)
+    private Integer docType;
+    
+    @Size(min = 2,max = 5)
+    @Column(name = "watch_status")
+    private Integer watchStatus;
+
+    
+    
     public Category() {
     }
 }
