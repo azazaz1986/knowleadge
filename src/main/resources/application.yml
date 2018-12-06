@@ -11,3 +11,5 @@ spring:
   http:
     multipart:
       resolve-lazily: true
+  freemarker:
+    suffix: .ftl

@@ -10,7 +10,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
  * @date 2018/11/29 14:49
  */
 
-public interface DocumentDAO extends JpaRepository<Document,Integer> {
+public interface DocumentDao extends JpaRepository<Document,Integer> {
     
     Page<Document> findByDocTitleLike(String docTitle, Pageable pageable);
     
