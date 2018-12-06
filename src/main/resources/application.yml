@@ -11,3 +11,9 @@ spring:
   http:
     multipart:
       resolve-lazily: true
+  data:
+    elasticsearch:
+       cluster-name: my-application
+       cluster-nodes: 127.0.0.1:9300
+     repositories:
+      enabled: false #仓库中存储的数据
