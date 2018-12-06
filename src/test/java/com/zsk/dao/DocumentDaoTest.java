@@ -20,9 +20,9 @@ import javax.transaction.Transactional;
  */
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class DocumentDAOTest {
+public class DocumentDaoTest {
     @Autowired
-    DocumentDAO documentDAO;
+    DocumentDao documentDAO;
     @Autowired
     CategoryDao categoryDao;
     
