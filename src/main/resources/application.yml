@@ -13,9 +13,10 @@ spring:
       resolve-lazily: true
   data:
     elasticsearch:
-       cluster-name: my-application
-       cluster-nodes: 127.0.0.1:9300
-     repositories:
+      cluster-name: my-application
+      cluster-nodes: 127.0.0.1:9300
+      repositories:
       enabled: false #仓库中存储的数据
   freemarker:
     suffix: .ftl
+    template-loader-path: classpath:templates/ #模板加载路径 按需配置

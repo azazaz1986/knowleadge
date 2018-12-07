@@ -1,13 +1,13 @@
 package com.zsk.service.Impl;
 
-import com.zsk.dao.DocumentDAO;
-import com.zsk.dto.SaveDocumentDTO;
+
+import com.zsk.dao.DocumentDao;
 import com.zsk.pojo.Document;
 import com.zsk.service.DocumentService;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.util.StringUtils;
+
 
 import javax.transaction.Transactional;
 
@@ -16,7 +16,7 @@ import javax.transaction.Transactional;
 public class DocumentServiceImpl implements DocumentService {
 
     @Autowired
-    private DocumentDAO documentDAO;
+    private DocumentDao documentDAO;
 
 
     @Override

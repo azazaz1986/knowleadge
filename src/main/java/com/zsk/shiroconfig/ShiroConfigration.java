@@ -30,6 +30,7 @@ public class ShiroConfigration {
 //        配置访问权限
         LinkedHashMap<String,String> definitionMap = new LinkedHashMap<>();
         definitionMap.put("/loginUser","anon");
+        definitionMap.put("/static/*","anon");
         definitionMap.put("/logOut","logout");
         definitionMap.put("/**","authc");
         shiroFilterFactoryBean.setFilterChainDefinitionMap(definitionMap);
