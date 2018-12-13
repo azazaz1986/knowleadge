@@ -17,7 +17,12 @@ import javax.transaction.Transactional;
 public class UserServiceImpl implements UserService {
     @Autowired
     UserDao userDao;
-    
+
+    /**
+     * 根据userName进行查询
+     * @param username
+     * @return
+     */
     @Override
     public User findByUserName(String username) {
         return userDao.findByUserName(username);

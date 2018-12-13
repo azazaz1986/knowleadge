@@ -9,5 +9,10 @@ import org.springframework.data.jpa.repository.JpaRepository;
  */
 
 public interface UserDao extends JpaRepository<User,Integer> {
+    /**
+     * 根据UserName进行查询
+     * @param username
+     * @return
+     */
     User findByUserName(String username);
 }

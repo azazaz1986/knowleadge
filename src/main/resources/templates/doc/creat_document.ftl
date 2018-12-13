@@ -33,12 +33,12 @@
             url:"/index/docType",
             type: "post",
             success : function (data) {
-                // alert(data.key.length);
-                for (var i = 0 ; i <data.key.length ;i++){
-                    $("#doc_type").append("<option value="+data.key[i].categoryId+">"+data.key[i].categoryText+"</option>");
-                }
+            // alert(data.key.length);
+            for (var i = 0 ; i <data.key.length ;i++){
+                $("#doc_type").append("<option value="+data.key[i].categoryId+">"+data.key[i].categoryText+"</option>");
             }
-        })
+        }
+    })
     })
     function sub() {
         var temp = true;

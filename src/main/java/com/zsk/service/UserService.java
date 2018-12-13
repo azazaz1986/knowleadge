@@ -8,5 +8,10 @@ import com.zsk.pojo.User;
  */
 
 public interface UserService {
+    /**
+     * 根据UserName进行查询
+     * @param username
+     * @return
+     */
     User findByUserName(String username);
 }

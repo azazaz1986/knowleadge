@@ -19,12 +19,23 @@ import javax.servlet.http.HttpSession;
 @Controller
 @Slf4j
 public class ShiroController {
-    
+    /**
+     * 页面跳转登录页面
+     * @return
+     */
     @RequestMapping("/login")
     public String login(){
         return "shiro/login";
     }
-    
+
+    /**
+     * Shiro进行认证
+     * @param username
+     * @param password
+     * @param map
+     * @param session
+     * @return
+     */
     @PostMapping("/loginUser")
     public String loginUser(String username, String password, ModelMap map, HttpSession session){
         log.info(username);

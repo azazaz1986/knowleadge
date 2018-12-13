@@ -42,4 +42,9 @@ public class UserDaoTest {
     public void findOne(){
         System.out.println(userDao.findOne(1));
     }
+
+    @Test
+    public void findByUsername(){
+        System.out.println(userDao.findByUserName("324"));
+    }
 }

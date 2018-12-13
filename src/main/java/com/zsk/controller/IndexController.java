@@ -28,14 +28,37 @@ public class IndexController {
     @Autowired
     private DocumentService documentService;
 
+    /**
+     * 页面跳转，跳转index页面
+     * @return
+     */
     @RequestMapping("html1")
     public String index(){
         return "index";
     }
+
+    /**
+     * 页面跳转，跳转知识添加页面
+     * @return
+     */
     @RequestMapping("creat")
     public String creat(){
-        return "creat/creat_document";
+        return "doc/creat_document";
     }
+
+    /**
+     * 页面跳转，跳转管理页面
+     * @return
+     */
+    @RequestMapping("admin")
+    public String admin(){
+        return "doc/admin";
+    }
+
+    /**
+     * 知识添加页面请求数据，获取知识类型
+     * @return
+     */
     @RequestMapping(value = "docType",method = RequestMethod.POST, produces = "application/json")
     @ResponseBody
     public Map<String, Object> findDocType(){
@@ -44,7 +67,10 @@ public class IndexController {
         return maps;
     }
 
-
+    /**
+     * 添加知识
+     * @param document
+     */
     @RequestMapping("creatDocument")
     public void creatDocument(SaveDocumentDTO document){
         Category category = categoryService.findOne(document.getCategory());

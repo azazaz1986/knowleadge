@@ -6,5 +6,7 @@
 </head>
 <body>
         <button onclick="location = '/index/creat'">创建知识</button>
+        <button onclick="location = '/index/admin'">知识管理</button>
+        <button onclick="location = '/index/doc'">知识检索</button>
 </body>
 </html>
