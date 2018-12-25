@@ -40,7 +40,6 @@ public class ShiroConfigration {
     @Bean
     public SecurityManager securityManager(AuthRealm authRealm){
         DefaultWebSecurityManager securityManager = new DefaultWebSecurityManager();
-        log.info("加载realm");
         securityManager.setRealm(authRealm);
         return securityManager;
     }
