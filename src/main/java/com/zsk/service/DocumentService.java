@@ -1,7 +1,9 @@
 package com.zsk.service;
 
-import com.zsk.dto.SaveDocumentDTO;
 import com.zsk.pojo.Document;
+import com.zsk.pojo.DocumentEs;
+import org.springframework.data.domain.Page;
+import org.springframework.data.elasticsearch.core.query.SearchQuery;
 
 import java.util.List;
 
@@ -30,4 +32,17 @@ public interface DocumentService {
     */
    void delectDocument(Integer documentId);
 
+   /**\
+    * Es知识搜索
+    * @param query
+    * @return
+    */
+    Page<DocumentEs> searchDoc(SearchQuery query);
+
+   /**
+    * 根据ID查询知识
+    * @param docId
+    * @return
+    */
+    Document findById(Integer docId);
 }

@@ -29,8 +29,9 @@ public class CategoryController {
      * @param category
      */
     @RequestMapping("/saveCategory")
-    public void saveCategory(Category category){
+    public String saveCategory(Category category){
         categoryService.saveCategory(category);
+        return "redirect:/cate/findCategoryList";
     }
 
     /**
@@ -38,8 +39,9 @@ public class CategoryController {
      * @param category
      */
     @RequestMapping("/updateCategory")
-    public void updateCategory(Category category){
+    public String updateCategory(Category category){
         categoryService.updateCategory(category);
+        return "redirect:/cate/findCategoryList";
     }
 
     /**
@@ -47,7 +49,8 @@ public class CategoryController {
      * @param categoryId
      */
     @RequestMapping("/delectCategory")
-    public void delectCategory(Integer categoryId){
+    public String delectCategory(Integer categoryId){
         categoryService.delectCategory(categoryId);
+        return "redirect:/cate/findCategoryList";
     }
 }

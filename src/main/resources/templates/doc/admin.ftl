@@ -16,6 +16,8 @@
                 <button onclick="location = '/index/creat'">新增知识</button>
                 <button onclick="location = '/index/creat'">修改知识</button>
                 <button onclick="location = '/index/creat'">修改分类</button>
+                <input type="text" id="searchName" name="searchName">
+                <button onclick="sub()" >提交</button>
                 <br/>
                 <table border="1"  cellspacing="0" id="tab1">
                 </table>
@@ -42,6 +44,20 @@
                 }
             })
         });
+        function sub() {
+           alert($("#searchName").val());
+           var name =  $("#searchName").val();
+           $.ajax({
+                url:"/doc/searchDoc",
+                // type:"post",
+                data:"searchName="+name,
+                // dataType:"json",
+                success:function (data) {
+
+                }
+            })
+
+        }
     </script>
 </body>
 </html>
