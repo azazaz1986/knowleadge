@@ -5,6 +5,7 @@ import com.zsk.pojo.Permission;
 import com.zsk.pojo.Role;
 import com.zsk.pojo.User;
 import com.zsk.service.UserService;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.shiro.authc.*;
 import org.apache.shiro.authz.AuthorizationInfo;
 import org.apache.shiro.authz.SimpleAuthorizationInfo;
@@ -21,13 +22,14 @@ import java.util.Set;
  * @author 夜尽
  * @date 2018/12/3 16:05
  */
-
+@Slf4j
 public class AuthRealm extends AuthorizingRealm {
     @Autowired
     UserService userService;
     
     @Override
     protected AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken authenticationToken) throws AuthenticationException {
+        log.info("开始认证用户");
         UsernamePasswordToken token = (UsernamePasswordToken) authenticationToken;
         String username = token.getUsername();
         User user = userService.findByUserName(username);
@@ -36,6 +38,7 @@ public class AuthRealm extends AuthorizingRealm {
     
     @Override
     protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principalCollection) {
+        log.info("进入授权");
         User user = (User) principalCollection.fromRealm(this.getClass().getName()).iterator().next();
         List<Role> roles = user.getRoleList();
         Set<String> roleNames = new HashSet<>();
